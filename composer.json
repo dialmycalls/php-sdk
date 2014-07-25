@@ -1,0 +1,16 @@
+{
+    "name": "dialmycalls/php-sdk",
+    "type": "library",
+    "description": "API client for the DialMyCalls.com API",
+    "keywords": ["api", "api-sdk", "api-client", "dialmycalls", "dmc"],
+    "homepage": "http://www.dialmycalls.com",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.2",
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": "4.*"
+    },
+    "autoload": {
+        "psr-0": { "DialMyCalls\\": "src/" }
+    }
+}
