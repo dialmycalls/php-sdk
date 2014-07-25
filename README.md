@@ -9,18 +9,13 @@ Requirements
 
 Autoload
 ---------------------
-The new version of `dialmycalls-php-sdk` using [Composer](http://getcomposer.org).
-The first step to use `dialmycalls-php-sdk` is to download Composer:
+The first step to use `dialmycalls-php-sdk` is to download [Composer](http://getcomposer.org):
 
 ```bash
 $ curl -s http://getcomposer.org/installer | php
 ```
 
-Then we have to install our dependencies using:
-```bash
-$ php composer.phar install
-```
-Now we can use autoloader from Composer by:
+Now we can add the SDK to composer.json:
 
 ```yaml
 {
@@ -29,6 +24,12 @@ Now we can use autoloader from Composer by:
     },
     "minimum-stability": "dev"
 }
+```
+
+Then we have to install our dependencies using:
+
+```bash
+$ php composer.phar install
 ```
 
 > `dialmycalls-php-sdk` follows the PSR-0 convention names for its classes, which means you can easily integrate `dialmycalls-php-sdk` classes loading in your own autoloader.

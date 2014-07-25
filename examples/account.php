@@ -5,9 +5,10 @@ require_once('../vendor/autoload.php');
 use DialMyCalls\Client;
 use DialMyCalls\Service;
 
-$apiKey  = '57838e0df8cb0c4bcce4d2c53485dffc';
+$apiKey  = '<API KEY GOES HERE>';
 $account = new Service\Account(new Client($apiKey));
 
+/*
 echo '-----------------------------' . PHP_EOL;
 echo 'DIALMYCALLS.COM - GET ACCOUNT' . PHP_EOL;
 echo '-----------------------------' . PHP_EOL;
@@ -18,3 +19,4 @@ if (($results = $account->get()) !== false) {
 } else {
     echo 'REQUEST FAILED: ' . $account->getException()->getMessage() . PHP_EOL;
 }
+*/

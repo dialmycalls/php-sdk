@@ -5,7 +5,7 @@ require_once('../vendor/autoload.php');
 use DialMyCalls\Client;
 use DialMyCalls\Service;
 
-$apiKey       = '57838e0df8cb0c4bcce4d2c53485dffc';
+$apiKey       = '<API KEY GOES HERE>';
 $vanitynumber = new Service\VanityNumber(new Client($apiKey));
 
 /*

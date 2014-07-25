@@ -5,7 +5,7 @@ require_once('../vendor/autoload.php');
 use DialMyCalls\Client;
 use DialMyCalls\Service;
 
-$apiKey = '57838e0df8cb0c4bcce4d2c53485dffc';
+$apiKey = '<API KEY GOES HERE>';
 $text   = new Service\Text(new Client($apiKey));
 
 /*
@@ -13,15 +13,15 @@ echo '-----------------------------' . PHP_EOL;
 echo 'DIALMYCALLS.COM - CREATE TEXT' . PHP_EOL;
 echo '-----------------------------' . PHP_EOL;
 
-$name  = 'Test Text';
-$keyword_id = '7a1a42de-9a53-406c-967b-355ecd8e1e25';
-$messages = array('Message #1');
-$send_at = new \DateTime('+1 month', new \DateTimeZone('UTC'));
+$name             = 'Test Text';
+$keyword_id       = '7a1a42de-9a53-406c-967b-355ecd8e1e25';
+$messages         = array('Message #1');
+$send_at          = new \DateTime('+1 month', new \DateTimeZone('UTC'));
 $send_immediately = false;
-$send_email = false;
-$contacts = array(
+$send_email       = false;
+$contacts         = array(
     array(
-        'phone' => '5613098480',
+        'phone' => '5555555555',
     )
 );
 

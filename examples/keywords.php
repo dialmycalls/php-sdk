@@ -5,9 +5,10 @@ require_once('../vendor/autoload.php');
 use DialMyCalls\Client;
 use DialMyCalls\Service;
 
-$apiKey   = '57838e0df8cb0c4bcce4d2c53485dffc';
+$apiKey   = '<API KEY GOES HERE>';
 $keywords = new Service\Keywords(new Client($apiKey));
 
+/*
 echo '-------------------------------' . PHP_EOL;
 echo 'DIALMYCALLS.COM - LIST KEYWORDS' . PHP_EOL;
 echo '-------------------------------' . PHP_EOL;
@@ -24,3 +25,4 @@ if (($results = $keywords->get()) !== false) {
 } else {
     echo 'REQUEST FAILED: ' . $keywords->getException()->getMessage() . PHP_EOL;
 }
+*/

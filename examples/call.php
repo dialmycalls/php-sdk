@@ -5,7 +5,7 @@ require_once('../vendor/autoload.php');
 use DialMyCalls\Client;
 use DialMyCalls\Service;
 
-$apiKey = '57838e0df8cb0c4bcce4d2c53485dffc';
+$apiKey = '<API KEY GOES HERE>';
 $call   = new Service\Call(new Client($apiKey));
 
 /*
@@ -13,16 +13,16 @@ echo '-----------------------------' . PHP_EOL;
 echo 'DIALMYCALLS.COM - CREATE CALL' . PHP_EOL;
 echo '-----------------------------' . PHP_EOL;
 
-$name  = 'Test Call';
-$callerid_id = 'a91e4834-dcba-414a-9342-c35d5e37e467';
-$recording_id = '3dcc4f15-b3c9-482e-9753-20168dd0b2d5';
-$send_at = new \DateTime('+1 month', new \DateTimeZone('UTC'));
+$name             = 'Test Call';
+$callerid_id      = 'a91e4834-dcba-414a-9342-c35d5e37e467';
+$recording_id     = '3dcc4f15-b3c9-482e-9753-20168dd0b2d5';
+$send_at          = new \DateTime('+1 month', new \DateTimeZone('UTC'));
 $send_immediately = false;
-$use_amd = false;
-$send_email = false;
-$contacts = array(
+$use_amd          = false;
+$send_email       = false;
+$contacts         = array(
     array(
-        'phone' => '5613098480',
+        'phone' => '5555555555',
     )
 );
 $add_ons = array();
@@ -75,6 +75,7 @@ if (($results = $call->cancel($call_id)) !== false) {
 }
 */
 
+/*
 echo '---------------------------------' . PHP_EOL;
 echo 'DIALMYCALLS.COM - CALL RECIPIENTS' . PHP_EOL;
 echo '---------------------------------' . PHP_EOL;
@@ -99,3 +100,4 @@ if (($results = $call->getRecipients($call_id)) !== false) {
 } else {
     echo 'REQUEST FAILED: ' . $call->getException()->getMessage() . PHP_EOL;
 }
+*/

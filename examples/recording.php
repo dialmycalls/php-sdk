@@ -5,7 +5,7 @@ require_once('../vendor/autoload.php');
 use DialMyCalls\Client;
 use DialMyCalls\Service;
 
-$apiKey    = '57838e0df8cb0c4bcce4d2c53485dffc';
+$apiKey    = '<API KEY GOES HERE>';
 $recording = new Service\Recording(new Client($apiKey));
 
 /*
@@ -81,7 +81,7 @@ echo 'DIALMYCALLS.COM - UPDATE RECORDING' . PHP_EOL;
 echo '----------------------------------' . PHP_EOL;
 
 $recording_id = '9499fdd2-a924-4703-9869-472b9094b589';
-$name = 'Test Recording Updated';
+$name         = 'Test Recording Updated';
 
 if (($results = $recording->update($recording_id, $name)) !== false) {
     echo 'ID: ' . $results->getId() . PHP_EOL;

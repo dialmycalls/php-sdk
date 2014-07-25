@@ -5,9 +5,10 @@ require_once('../vendor/autoload.php');
 use DialMyCalls\Client;
 use DialMyCalls\Service;
 
-$apiKey     = '57838e0df8cb0c4bcce4d2c53485dffc';
+$apiKey     = '<API KEY GOES HERE>';
 $recordings = new Service\Recordings(new Client($apiKey));
 
+/*
 echo '---------------------------------' . PHP_EOL;
 echo 'DIALMYCALLS.COM - LIST RECORDINGS' . PHP_EOL;
 echo '---------------------------------' . PHP_EOL;
@@ -27,3 +28,4 @@ if (($results = $recordings->get()) !== false) {
 } else {
     echo 'REQUEST FAILED: ' . $recordings->getException()->getMessage() . PHP_EOL;
 }
+*/

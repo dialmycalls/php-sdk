@@ -5,7 +5,7 @@ require_once('../vendor/autoload.php');
 use DialMyCalls\Client;
 use DialMyCalls\Service;
 
-$apiKey = '57838e0df8cb0c4bcce4d2c53485dffc';
+$apiKey = '<API KEY GOES HERE>';
 $group  = new Service\Group(new Client($apiKey));
 
 /*
@@ -48,7 +48,7 @@ echo 'DIALMYCALLS.COM - UPDATE GROUP' . PHP_EOL;
 echo '------------------------------' . PHP_EOL;
 
 $group_id = '504159ea-9f83-4428-afb0-41294954efeb';
-$name = 'Test Group Updated';
+$name     = 'Test Group Updated';
 
 if (($results = $group->update($group_id, $name)) !== false) {
     echo 'ID: ' . $results->getId() . PHP_EOL;
