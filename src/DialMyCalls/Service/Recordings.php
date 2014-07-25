@@ -2,6 +2,7 @@
 
 namespace DialMyCalls\Service;
 
+use DialMyCalls\Pagination;
 use DialMyCalls\Resource;
 
 class Recordings extends Base
@@ -9,12 +10,14 @@ class Recordings extends Base
     /**
      * Retrieve a list of contacts.
      *
+     * @param Pagination $pagination Pagination object.
+     *
      * @return boolean|Resource\Recording[]
      */
-    public function get()
+    public function get(Pagination $pagination = null)
     {
         try {
-            $response = $this->client->request('GET', 'recordings');
+            $response = $this->client->request('GET', 'recordings', array(), $pagination);
 
             $list = array();
             foreach ($response['results'] as $item) {

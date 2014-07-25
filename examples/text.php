@@ -80,7 +80,8 @@ echo '---------------------------------' . PHP_EOL;
 
 $text_id = '551b7eb9-77ff-403c-8256-ed8010345eeb';
 
-if (($results = $text->getRecipients($text_id)) !== false) {
+$pagination = new \DialMyCalls\Pagination(1, 10);
+if (($results = $text->getRecipients($text_id, $pagination)) !== false) {
     foreach ($results as $result) {
         echo 'First Name: ' . $result->getFirstName() . PHP_EOL;
         echo 'Last Name: ' . $result->getLastName() . PHP_EOL;

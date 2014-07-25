@@ -2,7 +2,7 @@
     "name": "dialmycalls/php-sdk",
     "type": "library",
     "description": "API client for the DialMyCalls.com API",
-    "keywords": ["api", "api-sdk", "api-client", "dialmycalls", "dmc"],
+    "keywords": ["api", "rest", "dialmycalls", "sms", "call"],
     "homepage": "http://www.dialmycalls.com",
     "license": "MIT",
     "require": {

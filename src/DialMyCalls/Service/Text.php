@@ -2,6 +2,7 @@
 
 namespace DialMyCalls\Service;
 
+use DialMyCalls\Pagination;
 use DialMyCalls\Resource;
 
 class Text extends Base
@@ -85,14 +86,20 @@ class Text extends Base
     /**
      * Retrieve a list of text recipients for a given broadcast.
      *
-     * @param string $id Unique ID for the text.
+     * @param string     $id         Unique ID for the text.
+     * @param Pagination $pagination Pagination object.
      *
      * @return boolean|Resource\TextRecipient[]
      */
-    public function getRecipients($id)
+    public function getRecipients($id, Pagination $pagination = null)
     {
         try {
-            $response = $this->client->request('GET', 'service/text/' . $id . '/recipients');
+            $response = $this->client->request(
+                'GET',
+                'service/text/' . $id . '/recipients',
+                array(),
+                $pagination
+            );
 
             $list = array();
             foreach ($response['results'] as $item) {

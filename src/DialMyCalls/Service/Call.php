@@ -2,6 +2,7 @@
 
 namespace DialMyCalls\Service;
 
+use DialMyCalls\Pagination;
 use DialMyCalls\Resource;
 
 class Call extends Base
@@ -89,14 +90,20 @@ class Call extends Base
     /**
      * Retrieve a list of call recipients for a given broadcast.
      *
-     * @param string $id Unique ID for the call.
+     * @param string     $id         Unique ID for the call.
+     * @param Pagination $pagination Pagination object.
      *
      * @return boolean|Resource\CallRecipient[]
      */
-    public function getRecipients($id)
+    public function getRecipients($id, Pagination $pagination = null)
     {
         try {
-            $response = $this->client->request('GET', 'service/call/' . $id . '/recipients');
+            $response = $this->client->request(
+                'GET',
+                'service/call/' . $id . '/recipients',
+                array(),
+                $pagination
+            );
 
             $list = array();
             foreach ($response['results'] as $item) {

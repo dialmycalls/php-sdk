@@ -13,7 +13,8 @@ echo '----------------------------' . PHP_EOL;
 echo 'DIALMYCALLS.COM - LIST CALLS' . PHP_EOL;
 echo '----------------------------' . PHP_EOL;
 
-if (($results = $calls->get()) !== false) {
+$pagination = new \DialMyCalls\Pagination(1, 10);
+if (($results = $calls->get($pagination)) !== false) {
     foreach ($results as $result) {
         echo 'ID: ' . $result->getId() . PHP_EOL;
         echo 'Name: ' . $result->getName() . PHP_EOL;
