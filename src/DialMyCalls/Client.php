@@ -7,7 +7,7 @@ use GuzzleHttp\Exception\RequestException;
 
 class Client
 {
-    const API_URL = 'http://%s@api.dialmycalls.com/2.0/';
+    const API_URL = 'https://%s@api.dialmycalls.com/2.0/';
 
     protected $apiKey = null;
     protected $apiUrl = null;
